@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Birthday Wish</title>
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+</head>
+<body>
+<div class="container">
+    {% if name %}
+        <img src="{% static '/hello.jpeg' %}" class="teddy" alt="Teddy Bear">
+        <h2>Helloooo,{{ name }}!,Kasi Ho</h2>
+        <p>Hor Btao kya kr rhi ho!,{{ name }}!</p><br>
+        <button onclick="wishAgain()">press Again</button>
+    {% else %}
+        <h1>Enter Your Name</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Your Name">
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+</div>
+
+<script>
+function wishAgain() {
+    alert("Chlo Bad Me milte ha!!");
+}
+</script>
+</body>
+</html>

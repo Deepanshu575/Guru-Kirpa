@@ -1,0 +1,45 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 18px;
+    background-color: #ff8ba7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .teddy {
+    width: 200px;
+    margin-top: 20px;
+    animation: float 2s infinite ease-in-out;
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
